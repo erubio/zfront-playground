@@ -17,6 +17,6 @@ app.get('/', function (req, res) {
 	res.render('home');
 });
 
-app.listen(3333, function () {
+app.listen(80, function () {
 	console.log('Playground listening on port 3000!');
 });
