@@ -13,7 +13,7 @@
     <meta property="og:description" content="Testing images"  />
 
     <meta property="og:type" content="article"  />
-    <meta property="og:image" content="http://static.zara.net/photos///2016/V/0/1/p/2768/873/250/2/w/560/2768873250_1_1_1.jpg?ts=1460130147403"  />
-    
+    <meta property="og:image" content="{imgUrl}"  />
+
 
 {/ headers}

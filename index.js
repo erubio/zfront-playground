@@ -16,7 +16,13 @@ app.set('json spaces', 0); // Trim json responses
 
 
 app.get('/', function (req, res) {
-	res.render('home');
+	var imgUrl = req.query.sharingImgUrl;
+	if(/^\/\//.test(imgUrl)) {
+		imgUrl = 'http:' + imgUrl;
+	}
+	res.render('home',{
+		imgUrl: imgUrl
+	});
 });
 
 app.listen(app.get('port'), function () {
