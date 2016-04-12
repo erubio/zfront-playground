@@ -5,6 +5,8 @@ var express = require('express'),
 	consolidate = require('consolidate'),
 	dust = require('dustjs-linkedin');
 
+app.set('port', (process.env.PORT || 5000));
+
 // Templates engine configuration
 dust.config.whitespace = false;
 app.engine('dust', consolidate.dust);
@@ -17,6 +19,6 @@ app.get('/', function (req, res) {
 	res.render('home');
 });
 
-app.listen(5000, function () {
-	console.log('Playground listening on port 3000!');
+app.listen(app.get('port'), function () {
+	console.log('Playground listening on port ' + app.get('port'));
 });
