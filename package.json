@@ -1,0 +1,21 @@
+{
+  "name": "zfront-playground",
+  "version": "1.0.0",
+  "description": "Playground",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "palyground",
+    "front"
+  ],
+  "author": "eze.rubio@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "consolidate": "^0.14.0",
+    "dust": "^0.3.0",
+    "dustjs-linkedin": "^2.7.2",
+    "express": "^4.13.4"
+  }
+}
