@@ -18,9 +18,8 @@ app.set('json spaces', 0); // Trim json responses
 app.get('/', function (req, res) {
 	var imgUrl = req.query.sharingImgUrl;
 	var acceptedLanguage = req.headers['accept-language'];
+	console.log('REQUEST', req)
 	console.log('HEADERS', req.headers);
-	console.log('type', typeof req.headers);
-	console.log('acceptedLanguagEE', acceptedLanguage)
 	var description = 'Descripción rellenada sin tener en cuenta los headers';
 
 	if(/^\/\//.test(imgUrl)) {
