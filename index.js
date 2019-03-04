@@ -26,8 +26,17 @@ app.get('/', function (req, res) {
 });
 
 app.get('/share', function (req, res) {
+	const acceptedLanguage = req.headers['accept-language'];
+	let description = '';
+
+	if (acceptedLanguage.indexOf('es-ES') !== -1) {
+		description = 'Descripción en español';
+	} else if (acceptedLanguage.indexOf('en-US') !== -1){
+		description = 'English description';
+	}
+
 	res.render('share', {
-		locale: req.query.fb_locale || 'es_ES'
+		description
 	});
 });
 

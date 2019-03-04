@@ -2,9 +2,9 @@
 
 {< mainContent}
 	<div class="page-header">
-		<h1>Share FB_LOCALE</h1>
+		<h1>Share</h1>
 		<ul>
-			<li>Locale: {locale}</li>
+			<li>Description: {description}</li>
 		</ul>
 	</div>
 	
@@ -13,10 +13,7 @@
 {< headers}
  	<meta property="og:title" content="ZFront sandbox content" />
     <meta property="og:site_name" content="ZFront Sandbox" />
-	<meta property="og:description" content="Testing images"  />
-	
-	<meta property="og:locale" content="{locale}"/>
-	<meta property="og:locale:alternate" content="en_US" />
+	<meta property="og:description" content="{description}"  />
 
     <meta property="og:type" content="article"  />
     <meta property="og:image" content="{imgUrl}"  />
