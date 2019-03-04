@@ -17,25 +17,20 @@ app.set('json spaces', 0); // Trim json responses
 
 app.get('/', function (req, res) {
 	var imgUrl = req.query.sharingImgUrl;
+	var acceptedLanguage = req.headers['accept-language'];
+	var description = 'Descripción rellenada sin tener en cuenta los headers';
+
 	if(/^\/\//.test(imgUrl)) {
 		imgUrl = 'http:' + imgUrl;
 	}
-	res.render('home',{
-		imgUrl: imgUrl
-	});
-});
-
-app.get('/share', function (req, res) {
-	const acceptedLanguage = req.headers['accept-language'];
-	let description = 'Descripción rellenada sin tener en cuenta los headers';
 
 	if (acceptedLanguage.indexOf('es-ES') !== -1) {
 		description = 'Descripción en español';
 	} else if (acceptedLanguage.indexOf('en-US') !== -1){
 		description = 'English description';
 	}
-
-	res.render('share', {
+	res.render('home',{
+		imgUrl,
 		description
 	});
 });
