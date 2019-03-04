@@ -27,7 +27,7 @@ app.get('/', function (req, res) {
 
 app.get('/share', function (req, res) {
 	const acceptedLanguage = req.headers['accept-language'];
-	let description = '';
+	let description = 'Descripción rellenada sin tener en cuenta los headers';
 
 	if (acceptedLanguage.indexOf('es-ES') !== -1) {
 		description = 'Descripción en español';
