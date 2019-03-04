@@ -10,7 +10,7 @@
 {< headers}
  	<meta property="og:title" content="ZFront sandbox content" />
     <meta property="og:site_name" content="ZFront Sandbox" />
-    <meta property="og:description" content="Nueva descripción no dinámica"  />
+    <meta property="og:description" content="{description}"  />
 
     <meta property="og:type" content="article"  />
     <meta property="og:image" content="{imgUrl}"  />

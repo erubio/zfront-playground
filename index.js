@@ -35,6 +35,21 @@ app.get('/', function (req, res) {
 	});
 });
 
+app.get('/test', function (req, res) {
+	var acceptedLanguage = req.headers['accept-language'];
+	var description = 'Descripción rellenada sin tener en cuenta los headers';
+
+	if (acceptedLanguage.indexOf('es-ES') !== -1) {
+		description = 'Descripción en español';
+	} else if (acceptedLanguage.indexOf('en-US') !== -1){
+		description = 'English description';
+	}
+	res.render('home',{
+		description
+	});
+});
+
+
 app.listen(app.get('port'), function () {
 	console.log('Playground listening on port ' + app.get('port'));
 });
