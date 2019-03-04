@@ -35,7 +35,7 @@ app.get('/', function (req, res) {
 	});
 });
 
-app.get('/test', function (req, res) {
+app.get('/test2', function (req, res) {
 	var acceptedLanguage = req.headers['accept-language'];
 	var description = 'Descripción rellenada sin tener en cuenta los headers';
 
