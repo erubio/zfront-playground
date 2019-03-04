@@ -2,7 +2,7 @@
 
 {< mainContent}
 	<div class="page-header">
-		<h1>Share</h1>
+		<h1>Share FB_LOCALE</h1>
 		<ul>
 			<li>Locale: {locale}</li>
 		</ul>
