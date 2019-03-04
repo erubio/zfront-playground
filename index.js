@@ -25,6 +25,12 @@ app.get('/', function (req, res) {
 	});
 });
 
+app.get('/share', function (req, res) {
+	res.render('share', {
+		locale: req.query.fb_locale || 'es_ES'
+	});
+});
+
 app.listen(app.get('port'), function () {
 	console.log('Playground listening on port ' + app.get('port'));
 });
