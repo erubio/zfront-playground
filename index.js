@@ -18,15 +18,16 @@ app.set('json spaces', 0); // Trim json responses
 app.get('/', function (req, res) {
 	var imgUrl = req.query.sharingImgUrl;
 	var acceptedLanguage = req.headers['accept-language'];
+	console.log('HEADERS', req.headers)
 	var description = 'Descripción rellenada sin tener en cuenta los headers';
 
 	if(/^\/\//.test(imgUrl)) {
 		imgUrl = 'http:' + imgUrl;
 	}
 
-	if (acceptedLanguage.indexOf('es-ES') !== -1) {
+	if (acceptedLanguage && acceptedLanguage.indexOf('es-ES') !== -1) {
 		description = 'Descripción en español';
-	} else if (acceptedLanguage.indexOf('en-US') !== -1){
+	} else if (acceptedLanguage && acceptedLanguage.indexOf('en-US') !== -1){
 		description = 'English description';
 	}
 	res.render('home',{
